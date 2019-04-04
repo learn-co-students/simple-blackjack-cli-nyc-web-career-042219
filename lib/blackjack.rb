@@ -25,18 +25,23 @@ end
 def initial_round
   2.times do
     deal_card
-    card_total = (deal_card) + (deal_card)
-    return card_total
-display_card_total(card_total)
+      card_total = (deal_card) + (deal_card)
+      
+      display_card_total(card_total)
+      return card_total
 end
 end
 
-def hit?
-  # code hit? here
+def hit?(card_total)
+prompt_user
+get_user_input
+
 end
 
 def invalid_command
-  # code invalid_command here
+  puts "Please enter a valid command."
+  prompt_user
+    return card_total
 end
 
 #####################################################
