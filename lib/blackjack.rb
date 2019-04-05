@@ -68,7 +68,11 @@ hit?
       
     else
       invalid_command
+    end
+  end
+  if card_total > 21
+  end_game
 end
 end 
-end
+
   
