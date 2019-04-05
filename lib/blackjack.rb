@@ -55,6 +55,18 @@ end
 #####################################################
 
 def runner
-  # code runner here
+welcome
+initial_round
+hit?
+  until (card_total > 21)
+    input = get_user_input
+    if input =='h'
+      card_total += deal_card
+    elsif input == 's'
+      return card_total
+    else
+      invalid_command
 end
-    
+end 
+end
+  
