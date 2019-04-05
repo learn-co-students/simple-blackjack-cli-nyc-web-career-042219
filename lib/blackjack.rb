@@ -59,20 +59,10 @@ welcome
 initial_round
 hit?
   until (card_total > 21)
-    input = get_user_input
-    if input =='h'
-      card_total += deal_card
-    elsif input == 's'
-      get_user_input
-      return card_total
-      
-    else
-      invalid_command
-    end
-  end
+  hit?
   if card_total > 21
   end_game
 end
 end 
-
+end
   
