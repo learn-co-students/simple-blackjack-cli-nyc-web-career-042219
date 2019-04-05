@@ -63,7 +63,9 @@ hit?
     if input =='h'
       card_total += deal_card
     elsif input == 's'
+      get_user_input
       return card_total
+      
     else
       invalid_command
 end
