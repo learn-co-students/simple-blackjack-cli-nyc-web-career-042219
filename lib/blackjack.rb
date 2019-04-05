@@ -48,19 +48,36 @@ def invalid_command
     return card_total
 end
 
+def new_hit(card_total)
+card_total+=deal_card
+end 
+
 #####################################################
 # get every test to pass before coding runner below #
 #####################################################
 
 def runner
+  #setup 
 welcome
-initial_round
-hit?
-  until (card_total > 21)
-  hit?
+card_total = initial_round
+prompt_user
+input = get_user_input
+until card_total > 21
+  if input == "h"
+  card_total = new_hit(card_total)
+  display_card_total(card_total)
+  elsif input == "s"
+  stay=true
+  else
+    invalid_command
+  end 
+  end
+  if card_total == 21
+    puts "You Drew Blackjack"
+    return "You Win!!"
+  end 
   if card_total > 21
-  end_game
+    puts "Sorry, you hit 30. Thanks for playing!"
+  end 
+
 end
-end 
-end
-  
