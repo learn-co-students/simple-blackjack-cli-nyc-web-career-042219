@@ -1,3 +1,4 @@
+
 def welcome
   puts "Welcome to the Blackjack Table"
   # code #welcome here
@@ -36,18 +37,17 @@ end
 def hit?(total)
    prompt_user
    input = get_user_input
-    while input != "h" || input != "s"
+ while input != "h" && input != "s"
     invalid_command
     prompt_user
-    get_user_input
-   if input == h
-     break
-   total += deal_card
- elsif input == s
-   break
+    input = get_user_input
+  end
+   if input == "h"
+      total += deal_card
+ elsif
+   input == "s"
    total
 end
-total 
 end
 
 def invalid_command
@@ -59,8 +59,28 @@ end
 # #####################################################
 # # get every test to pass before coding runner below #
 # #####################################################
-#
+
+def runner
+  welcome
+  total = initial_round
+  until total > 21
+  total = hit?(total)
+  display_card_total(total)
+end
+end_game(total)
+end
+
+
 # def runner
-#   # code runner here
+#   welcome
+#   total = initial_round
+#   until total > 21
+#     total = hit?(total)
+#     display_card_total(total)
+#   end
+#   end_game(total)
 # end
-#
+
+
+
+  # code runner here
