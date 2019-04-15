@@ -47,7 +47,7 @@ def hit?(total)
    break
    total
 end
-#  total
+total 
 end
 
 def invalid_command
